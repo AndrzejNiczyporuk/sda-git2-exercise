@@ -1,10 +1,15 @@
 package pl.sda.git;
 
+import pl.sda.git.impl.ConcatAction;
+
 import java.util.*;
 
 public class Main {
 	private static final Map<String, Action> possibleActions = new LinkedHashMap<>();
 	
+	static {
+		possibleActions.put("concat", new ConcatAction());
+	}
 	
 	public static void main(String[] args) {
 		final Scanner scanner = new Scanner(System.in);
